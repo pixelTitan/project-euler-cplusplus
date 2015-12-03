@@ -1,9 +1,11 @@
 #include <iostream>
 
+#define TEST_VALUE 600851475143
+
 using namespace std;
 
 int main() {
-    long long factor = 600851475143;
+    long long factor = TEST_VALUE;
     long long divisor = 2;
     long long max_prime_divisor = -1;
 
@@ -20,6 +22,7 @@ int main() {
         // If the current factor is divisible by the divisor, we do the division and come up with the next factor.
         if (factor % divisor == 0) {
             factor = factor / divisor;
+            divisor = 2;
         }
 
         // Increment to the next possible divisor.
