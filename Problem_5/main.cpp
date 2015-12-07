@@ -42,8 +42,6 @@ int main() {
             continue;
         }
 
-        cout << i << endl;
-
         product *= i;
     }
 
